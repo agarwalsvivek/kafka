@@ -1,6 +1,7 @@
-const { kafka, TOPIC } = require('../kafka-client');
+import { kafka, TOPIC } from '../kafka-client';
+import { EachMessagePayload } from 'kafkajs';
 
-async function runConsumer() {
+async function runConsumer(): Promise<void> {
   const consumer = kafka.consumer({
     groupId: 'learning-group', // Consumer group ID — Kafka tracks offsets per group
   });
@@ -17,14 +18,14 @@ async function runConsumer() {
   console.log('   (Press Ctrl+C to stop)\n');
 
   await consumer.run({
-    eachMessage: async ({ topic, partition, message }) => {
-      const value = JSON.parse(message.value.toString());
+    eachMessage: async ({ topic, partition, message }: EachMessagePayload) => {
+      const value = JSON.parse(message.value!.toString());
 
       console.log('📥 Received message:');
       console.log(`   Topic     : ${topic}`);
       console.log(`   Partition : ${partition}`);
       console.log(`   Offset    : ${message.offset}`);
-      console.log(`   Key       : ${message.key.toString()}`);
+      console.log(`   Key       : ${message.key!.toString()}`);
       console.log(`   Value     :`, value);
       console.log('');
     },

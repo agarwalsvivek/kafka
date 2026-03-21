@@ -1,4 +1,4 @@
-const { Kafka } = require('kafkajs');
+import { Kafka } from 'kafkajs';
 
 // Create a Kafka instance pointing to our local broker (started via Docker)
 const kafka = new Kafka({
@@ -8,4 +8,4 @@ const kafka = new Kafka({
 
 const TOPIC = 'learning-topic';
 
-module.exports = { kafka, TOPIC };
+export { kafka, TOPIC };

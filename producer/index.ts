@@ -1,6 +1,6 @@
-const { kafka, TOPIC } = require('../kafka-client');
+import { kafka, TOPIC } from '../kafka-client';
 
-async function runProducer() {
+async function runProducer(): Promise<void> {
   const producer = kafka.producer();
 
   console.log('🔌 Connecting producer to Kafka...');

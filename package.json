@@ -4,10 +4,16 @@
   "description": "A simple Kafka producer/consumer example using Node.js",
   "main": "index.js",
   "scripts": {
-    "producer": "node producer/index.js",
-    "consumer": "node consumer/index.js"
+    "producer": "ts-node producer/index.ts",
+    "consumer": "ts-node consumer/index.ts"
   },
   "dependencies": {
     "kafkajs": "^2.2.4"
+  },
+  "devDependencies": {
+    "@types/kafkajs": "^1.8.2",
+    "@types/node": "^25.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   }
 }
