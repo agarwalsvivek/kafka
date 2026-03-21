@@ -1,0 +1,13 @@
+{
+  "name": "kafka-learning",
+  "version": "1.0.0",
+  "description": "A simple Kafka producer/consumer example using Node.js",
+  "main": "index.js",
+  "scripts": {
+    "producer": "node producer/index.js",
+    "consumer": "node consumer/index.js"
+  },
+  "dependencies": {
+    "kafkajs": "^2.2.4"
+  }
+}
