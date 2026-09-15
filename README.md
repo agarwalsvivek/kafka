@@ -71,14 +71,14 @@ docker-compose down
 
 ## 💡 Key Concepts You'll See in Action
 
-| Concept        | Where                  | What it means                                      |
-|----------------|------------------------|----------------------------------------------------|
-| **Topic**      | `kafka-client.js`      | A named channel where messages are published       |
-| **Producer**   | `producer/index.js`    | Sends messages to a topic                          |
-| **Consumer**   | `consumer/index.js`    | Reads messages from a topic                        |
-| **Consumer Group** | `consumer/index.js` | Lets multiple consumers share the workload        |
-| **Offset**     | Consumer output        | Position of a message in the topic (like an index) |
-| **Partition**  | Consumer output        | Topic sub-division for parallelism                 |
+| Concept            | Where               | What it means                                      |
+| ------------------ | ------------------- | -------------------------------------------------- |
+| **Topic**          | `kafka-client.js`   | A named channel where messages are published       |
+| **Producer**       | `producer/index.js` | Sends messages to a topic                          |
+| **Consumer**       | `consumer/index.js` | Reads messages from a topic                        |
+| **Consumer Group** | `consumer/index.js` | Lets multiple consumers share the workload         |
+| **Offset**         | Consumer output     | Position of a message in the topic (like an index) |
+| **Partition**      | Consumer output     | Topic sub-division for parallelism                 |
 
 ---
 
